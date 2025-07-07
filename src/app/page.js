@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import HeroSlider from "./Components/HeroSlider";
 import ProductCard from "./Components/ProductCard";
-
+import DealBanner from "./Components/DealBanner";
 export default function Home() {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -42,14 +42,17 @@ export default function Home() {
       <HeroSlider />
 
       {/* 🧭 Categories */}
-      <section className="py-6">
-        <h2 className="text-2xl font-bold mb-4">🧭 Shop by Category</h2>
-        <div className="flex gap-3 overflow-x-auto">
+      <section className="py-6 px-4">
+        <h2 className="text-xl sm:text-2xl font-bold mb-4">
+          🧭 Shop by Category
+        </h2>
+
+        <div className="flex flex-wrap sm:flex-nowrap gap-3 overflow-x-auto sm:overflow-visible">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 border rounded-full capitalize text-sm transition ${
+              className={`px-4 py-2 border rounded-full capitalize text-sm whitespace-nowrap transition ${
                 selectedCategory === cat
                   ? "bg-blue-600 text-white"
                   : "hover:bg-blue-200"
@@ -63,7 +66,7 @@ export default function Home() {
           {selectedCategory && (
             <button
               onClick={() => setSelectedCategory(null)}
-              className="px-4 py-2 border rounded-full bg-red-500 text-white text-sm"
+              className="px-4 py-2 border rounded-full bg-red-500 text-white text-sm whitespace-nowrap"
             >
               Reset
             </button>
@@ -84,6 +87,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <DealBanner />
     </main>
   );
 }
