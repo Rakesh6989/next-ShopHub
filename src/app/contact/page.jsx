@@ -2,8 +2,8 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div>
-      sdfdsf
+    <div className='py-20'>
+      This is Contact Us pagejs
     </div>
   )
 }

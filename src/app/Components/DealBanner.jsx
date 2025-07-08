@@ -54,11 +54,7 @@ export default function DealBanner() {
             </div>
           </SwiperSlide>
         ))}
-
-        {/* ✅ Arrows moved inside Swiper */}
-        <div className="swiper-button-prev !text-white !left-2 !z-10" />
-        <div className="swiper-button-next !text-white !right-2 !z-10" />
-      </Swiper>
+              </Swiper>
     </section>
   );
 }

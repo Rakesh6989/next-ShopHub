@@ -5,7 +5,6 @@ import { Autoplay, Navigation } from "swiper/modules";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
-
 const slides = [
   {
     id: 1,

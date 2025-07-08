@@ -2,9 +2,9 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "@mui/icons-material";
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <nav className="fixed top-0 z-50 w-full h-20 bg-gray-900 text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -23,14 +23,15 @@ export default function Navbar() {
               Shop
             </Link>
           </li>
-          <li>
-            <Link href="/categories" className="hover:text-yellow-400">
-              Categories
-            </Link>
-          </li>
+
           <li>
             <Link href="/contact" className="hover:text-yellow-400">
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link href="/sign-up" className="hover:text-yellow-400">
+              Sign up
             </Link>
           </li>
         </ul>
@@ -57,8 +58,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/categories" onClick={() => setIsOpen(false)}>
-              Categories
+            <Link href="/sign-up" onClick={() => setIsOpen(false)}>
+              Sign up
             </Link>
           </li>
           <li>
